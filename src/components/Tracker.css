@@ -1,6 +1,49 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: wrap row;
+body {
+  padding: 5vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap row;
+}
+
+.tit-inp {
+  width: 100%;
+  text-align: center;
+}
+
+.tit-btn {
+  display: flex;
+  align-items: center;
+  margin: 1vw;
+}
+
+input {
+  height: 3vw;
+  padding: 1vw;
+  border: solid 1px #000;
+  border-radius: 2px;
+  margin: 2vw;
+  transition: all 1s ease;
+}
+input:hover {
+  box-shadow: #b1b1b1 0.5vw 0.5vw 1.2vw;
+  transform: scale(1.05);
+}
+
+button {
+  height: 2.5vw;
+  width: 2.5vw;
+  background: #fff;
+  border: solid 1px #000;
+  border-radius: 2px;
+  margin: 1.5vw;
+}
+
+
+.ult-tex{
+    margin: 5vw;
+    font-size: 2.2vw;
 }

@@ -31,16 +31,17 @@ export default function Tracker() {
   let [text, setText] = useState("");
   return (
     <div className="container">
-      <h2>Habitos por obtener</h2>
-      <input
-        type="text"
-        placeholder="Ingrese su nuevo habito"
-        onChange={(e) => setText(e.target.value)}
-      />
+      <div className="tit-inp">
+        <h2>Habitos por obtener</h2>
+        <input
+          type="text"
+          placeholder="Ingrese su nuevo habito"
+          onChange={(e) => setText(e.target.value)}
+        />
+      </div>
       {dias.map((dia) => (
-        <div key={dia.id}>
+        <div key={dia.id} className="tit-btn">
           <h4>{dia.dia}</h4>
-          <h3></h3>
           <button
             onClick={() => {
               completa(dia.id);
@@ -51,13 +52,15 @@ export default function Tracker() {
               }
             }}
           >
-            {dia.estado ? "Completada" : "Pendiente"}
+            {dia.estado ? "✔️" : "✖️"}
           </button>
         </div>
       ))}
-      <h3>
-        Lograste {text} un total de: {count} dias.
-      </h3>
+      <div className="ult-tex">
+        <h3>
+          Lograste {text} un total de: {count} dias.
+        </h3>
+      </div>
     </div>
   );
 }
