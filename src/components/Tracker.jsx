@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Tracker.css";
 
 export default function Tracker() {
   let [dias, setDias] = useState([
